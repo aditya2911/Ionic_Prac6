@@ -1,17 +1,124 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Registration Form</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <form> 
+    <!-- [formGroup]="registrationForm" -->
+    <ion-item>
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input formControlName="fullName" type="text"></ion-input>
+    </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item>
+      <ion-label position="floating">Email Address</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contact Number</ion-label>
+      <ion-input formControlName="contactNumber" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Roll Number</ion-label>
+      <ion-input formControlName="rollNumber" type="text"></ion-input>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Higher Secondary Education</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">College Name</ion-label>
+          <ion-input formControlName="hscCollege" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Year of Passing</ion-label>
+          <ion-input formControlName="hscYear" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Total Marks</ion-label>
+          <ion-input formControlName="hscTotalMarks" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Marks Obtained</ion-label>
+          <ion-input formControlName="hscMarksObtained" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Percentage</ion-label>
+          <ion-input formControlName="hscPercentage" type="number" step="0.01"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Secondary School Education</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">School Name</ion-label>
+          <ion-input formControlName="sscSchool" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Year of Passing</ion-label>
+          <ion-input formControlName="sscYear" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Total Marks</ion-label>
+          <ion-input formControlName="sscTotalMarks" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Marks Obtained</ion-label>
+          <ion-input formControlName="sscMarksObtained" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Percentage</ion-label>
+          <ion-input formControlName="sscPercentage" type="number" step="0.01"></ion-input>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Semester Marks</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">CGPA</ion-label>
+          <ion-input formControlName="cgpa" type="number" step="0.01"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Percentage</ion-label>
+          <ion-input formControlName="percentage" type="number" step="0.01"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-item>
+      <ion-label position="floating">Additional Courses</ion-label>
+      <ion-input formControlName="additionalCourses" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Resume</ion-label>
+      <ion-input type="file" accept="application/pdf" ></ion-input>
+      <!-- (change)="handleFileInput($event)" -->
+    </ion-item>
+  </form>
 </ion-content>
+
+
