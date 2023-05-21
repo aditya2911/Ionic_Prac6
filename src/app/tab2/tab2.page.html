@@ -37,7 +37,7 @@
              <ion-card-subtitle>DESIGNATION</ion-card-subtitle>
              <ion-card-title>{{item.designation}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content>
+          <ion-card-content class="ion-text-center" >
           <ion-item>
           <ion-icon name="mail" 
          slot="start"></ion-icon>
@@ -53,6 +53,10 @@
          slot="start"></ion-icon>
           <ion-label>{{item.domain}}</ion-label>
           </ion-item>
+
+          <ion-button class="containerButton" (click)="routeToRegister()">
+            Register 
+          </ion-button>
           </ion-card-content>
           </ion-card>
           </div>

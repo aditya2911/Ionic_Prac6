@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form> 
-    <!-- [formGroup]="registrationForm" -->
+  <form [formGroup]="registrationForm"> 
+
     <ion-item>
       <ion-label position="floating">Full Name</ion-label>
       <ion-input formControlName="fullName" type="text"></ion-input>
@@ -63,7 +63,7 @@
       <ion-card-header>
         <ion-card-title>Secondary School Education</ion-card-title>
       </ion-card-header>
-      <ion-card-content>
+      <ion-card-content class="ion-text-center">
         <ion-item>
           <ion-label position="floating">School Name</ion-label>
           <ion-input formControlName="sscSchool" type="text"></ion-input>
@@ -88,37 +88,13 @@
           <ion-label position="floating">Percentage</ion-label>
           <ion-input formControlName="sscPercentage" type="number" step="0.01"></ion-input>
         </ion-item>
+        <ion-item>
+          <ion-label>Resume</ion-label>
+          <ion-input type="file" accept="application/pdf" ></ion-input>
+          <!-- (change)="handleFileInput($event)" -->
+        </ion-item>
 
+        <ion-button >Submit</ion-button>
       </ion-card-content>
     </ion-card>
     <ion-card>
-      <ion-card-header>
-        <ion-card-title>Semester Marks</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-label position="floating">CGPA</ion-label>
-          <ion-input formControlName="cgpa" type="number" step="0.01"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Percentage</ion-label>
-          <ion-input formControlName="percentage" type="number" step="0.01"></ion-input>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-item>
-      <ion-label position="floating">Additional Courses</ion-label>
-      <ion-input formControlName="additionalCourses" type="text"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Resume</ion-label>
-      <ion-input type="file" accept="application/pdf" ></ion-input>
-      <!-- (change)="handleFileInput($event)" -->
-    </ion-item>
-  </form>
-</ion-content>
-
-
