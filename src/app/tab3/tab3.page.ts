@@ -4,37 +4,16 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
-interface AccordionItem {
-  title: string;
-  expanded: boolean;
-}
-
-interface ListItem {
-  name: string;
-  designation: string;
-  email: string;
-  phone: string;
-  domain: string;
-  image: string;
-}
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
-  standalone: true,
+  standalone:true,
   imports: [IonicModule, ExploreContainerComponent,CommonModule,ReactiveFormsModule]
-
 })
 export class Tab3Page {
   registrationForm!: FormGroup;
-
-  ngOnInit() {
-    // Subscribe to value changes of relevant form controls
-    this.calculateHscPercentage();
-    this.calculateSscPercentage();
-    this.calculateOverallPercentage();
-  }
 
   constructor(private router: Router, private formBuilder: FormBuilder) {
     this.registrationForm = this.formBuilder.group({
@@ -54,7 +33,7 @@ export class Tab3Page {
       sscPercentage: [{ value: '', disabled: true }],
       cgpa: ['', Validators.required],
       percentage: [{ value: '', disabled: true }],
-      additionalCourses: [''],
+      additionalCourses: ['']
     });
 
     this.calculateHscPercentage();
@@ -87,35 +66,32 @@ export class Tab3Page {
       const cgpa = this.registrationForm.get('cgpa')!.value || 0;
 
       const overallPercentage = (parseFloat(hscPercentage) + parseFloat(sscPercentage) + parseFloat(cgpa)) / 3;
-      this.registrationForm.get('percentage')!.setValue(overallPercentage.toFixed(2), { emitEvent
-        : false });
-      });
-      }
-      
-      onSubmit() {
-      // Handle form submission logic here
-      if (this.registrationForm.valid) {
+      this.registrationForm.get('percentage')!.setValue(overallPercentage.toFixed(2), { emitEvent: false });
+    });
+  }
+
+  onSubmit() {
+    // Handle form submission logic here
+    if (this.registrationForm.valid) {
       // Form is valid, perform submission
       console.log(this.registrationForm.value);
       // Reset the form
       this.registrationForm.reset();
       // Redirect to a success page
       this.router.navigate(['/success']);
-      } else {
+    } else {
       // Form is invalid, mark all fields as touched to display validation errors
       this.markFormGroupTouched(this.registrationForm);
-      }
-      }
-      
-      markFormGroupTouched(formGroup: FormGroup) {
-      Object.values(formGroup.controls).forEach(control => {
+    }
+  }
+
+  markFormGroupTouched(formGroup: FormGroup) {
+    Object.values(formGroup.controls).forEach(control => {
       if (control instanceof FormGroup) {
-      this.markFormGroupTouched(control);
+        this.markFormGroupTouched(control);
       } else {
-      control.markAsTouched();
+        control.markAsTouched();
       }
-      });
-      }
-      }
-      
-   
+    });
+  }
+}

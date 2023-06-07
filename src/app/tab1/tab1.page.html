@@ -1,59 +1,61 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Profile</ion-title>
+    <ion-title style="font-family: 'Arial', sans-serif;">Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <div class="imageContainer"> <img src="../../assets/images/profilePic.jpg" alt="User Image" style="width: 200px; height: 200px; border-radius: 50%;"> </div>
-      <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
-        <div class="profile-card">
+    <ion-row style="justify-content: center;">
+      <div class="imageContainer" style="border-radius: 50%; overflow: hidden; width: 200px; height: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+        <img src="../../assets/images/profilePic.jpg" alt="User Image" style="width: 100%; height: 100%;">
+      </div>
+      <ion-col size="12" size-md="8" size-lg="6" style="text-align: center;">
+        <div class="profile-card" style="font-family: 'Arial', sans-serif; background-color: #f0f0f0; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
           <div class="profile-info">
-            <ion-item class="profile-item">
-              <ion-label class="item-label">Name</ion-label>
-              <ion-text class="item-value">Aditya Salunke</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">Name</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">John Doe</ion-text>
             </ion-item>
-            <ion-item class="profile-item">
-              <ion-label class="item-label">E-mail</ion-label>
-              <ion-text class="item-value">adisalu15@gmail.com</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">E-mail</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">johndoe@example.com</ion-text>
             </ion-item>
-            <ion-item class="profile-item">
-              <ion-label class="item-label">Contact</ion-label>
-              <ion-text class="item-value">9873543212</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">Contact</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">9876543210</ion-text>
             </ion-item>
-            <ion-item class="profile-item">
-              <ion-label class="item-label">Roll No</ion-label>
-              <ion-text class="item-value">2022510053</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">Roll No</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">202300001</ion-text>
             </ion-item>
-            <ion-item class="profile-item">
-              <ion-label class="item-label">HSC Marks</ion-label>
-              <ion-text class="item-value">90%</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">HSC Marks</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">95%</ion-text>
             </ion-item>
-            <ion-item class="profile-item">
-              <ion-label class="item-label">SSC Marks</ion-label>
-              <ion-text class="item-value">95%</ion-text>
+            <ion-item class="profile-item" style="margin-bottom: 10px;">
+              <ion-label class="item-label" style="font-weight: bold;">SSC Marks</ion-label>
+              <ion-text class="item-value" style="font-size: 18px;">92%</ion-text>
             </ion-item>
           </div>
         </div>
 
-        <div class="post-card">
-          <h2 class="post-title">My Posts</h2>
-          <ion-card class="post-item">
+        <div class="post-card" style="font-family: 'Arial', sans-serif; margin-top: 20px;">
+          <h2 class="post-title" style="font-size: 24px; font-weight: bold;">My Posts</h2>
+          <ion-card class="post-item" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 20px;">
             <ion-card-header>
-              <ion-card-title>Ionic Journey</ion-card-title>
+              <ion-card-title style="font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold;">Ionic Journey</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content style="font-family: 'Arial', sans-serif; font-size: 16px;">
               Learning
             </ion-card-content>
           </ion-card>
 
-          <ion-card class="post-item">
+          <ion-card class="post-item" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 20px;">
             <ion-card-header>
-              <ion-card-title>Flutter journey</ion-card-title>
+              <ion-card-title style="font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold;">Flutter Journey</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content style="font-family: 'Arial', sans-serif; font-size: 16px;">
               Installation of Flutter
             </ion-card-content>
           </ion-card>

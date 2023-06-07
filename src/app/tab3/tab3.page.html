@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Registration Form</ion-title>
+    <ion-title style="font-family: 'Arial', sans-serif;">Registration Form</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,93 +8,94 @@
   <form [formGroup]="registrationForm"> 
 
     <ion-item>
-      <ion-label position="floating">Full Name</ion-label>
+      <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Full Name</ion-label>
       <ion-input formControlName="fullName" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Email Address</ion-label>
+      <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Email Address</ion-label>
       <ion-input formControlName="email" type="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Contact Number</ion-label>
+      <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Contact Number</ion-label>
       <ion-input formControlName="contactNumber" type="tel"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Roll Number</ion-label>
+      <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Roll Number</ion-label>
       <ion-input formControlName="rollNumber" type="text"></ion-input>
     </ion-item>
 
-    <ion-card>
+    <ion-card style="font-family: 'Arial', sans-serif; margin-top: 20px;">
       <ion-card-header>
         <ion-card-title>Higher Secondary Education</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-item>
-          <ion-label position="floating">College Name</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">College Name</ion-label>
           <ion-input formControlName="hscCollege" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Year of Passing</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Year of Passing</ion-label>
           <ion-input formControlName="hscYear" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Total Marks</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Total Marks</ion-label>
           <ion-input formControlName="hscTotalMarks" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Marks Obtained</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Marks Obtained</ion-label>
           <ion-input formControlName="hscMarksObtained" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Percentage</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Percentage</ion-label>
           <ion-input formControlName="hscPercentage" type="number" step="0.01"></ion-input>
         </ion-item>
       </ion-card-content>
     </ion-card>
 
-    <ion-card>
+    <ion-card style="font-family: 'Arial', sans-serif; margin-top: 20px;">
       <ion-card-header>
         <ion-card-title>Secondary School Education</ion-card-title>
       </ion-card-header>
       <ion-card-content class="ion-text-center">
         <ion-item>
-          <ion-label position="floating">School Name</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">School Name</ion-label>
           <ion-input formControlName="sscSchool" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Year of Passing</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Year of Passing</ion-label>
           <ion-input formControlName="sscYear" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Total Marks</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Total Marks</ion-label>
           <ion-input formControlName="sscTotalMarks" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Marks Obtained</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Marks Obtained</ion-label>
           <ion-input formControlName="sscMarksObtained" type="number"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Percentage</ion-label>
+          <ion-label position="floating" style="font-family: 'Arial', sans-serif;">Percentage</ion-label>
           <ion-input formControlName="sscPercentage" type="number" step="0.01"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Resume</ion-label>
-          <ion-input type="file" accept="application/pdf" ></ion-input>
+          <ion-label style="font-family: 'Arial', sans-serif;">Resume</ion-label>
+          <ion-input type="file" accept="application/pdf"></ion-input>
           <!-- (change)="handleFileInput($event)" -->
         </ion-item>
 
-        <ion-button >Submit</ion-button>
+        <ion-button style="font-family: 'Arial', sans-serif; margin-top: 20px;">Submit</ion-button>
       </ion-card-content>
     </ion-card>
-    <ion-card>
+  </form>
+</ion-content>
